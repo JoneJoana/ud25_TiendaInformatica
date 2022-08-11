@@ -1,8 +1,8 @@
-package com.ud25_APIsSpring.service;
+package com.ud25_TiendaInformatica.service;
 
 import java.util.List;
 
-import com.ud25_APIsSpring.dto.Articulos;
+import com.ud25_TiendaInformatica.dto.Articulos;
 
 public interface IArticulosService {
 

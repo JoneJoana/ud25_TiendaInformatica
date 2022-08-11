@@ -1,4 +1,4 @@
-package com.ud25_APIsSpring;
+package com.ud25_TiendaInformatica;
 
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

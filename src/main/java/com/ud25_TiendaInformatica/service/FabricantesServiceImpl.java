@@ -1,10 +1,11 @@
-package com.ud25_APIsSpring.service;
+package com.ud25_TiendaInformatica.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import com.ud25_APIsSpring.dao.IFabricantesDAO;
-import com.ud25_APIsSpring.dto.Fabricantes;
+
+import com.ud25_TiendaInformatica.dao.IFabricantesDAO;
+import com.ud25_TiendaInformatica.dto.Fabricantes;
 
 public class FabricantesServiceImpl implements IFabricantesService {
 	

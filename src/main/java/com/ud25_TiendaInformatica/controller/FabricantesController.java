@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ud25_TiendaInformatica.dto.Articulos;
 import com.ud25_TiendaInformatica.dto.Fabricantes;
 import com.ud25_TiendaInformatica.service.FabricantesServiceImpl;
 
@@ -23,7 +24,7 @@ public class FabricantesController {
 	FabricantesServiceImpl fabriServImpl;
 	
 	@GetMapping("/fabricantes")
-	public List<Fabricantes> listarArticulos(){
+	public List<Fabricantes> listarFabricantes(){
 		return fabriServImpl.listFabricantes();
 	}
 
@@ -38,14 +39,24 @@ public class FabricantesController {
 	}
 	
 	@PostMapping("/fabricantes") //crear
-	public Fabricantes guardarFabricante(@RequestBody Fabricantes fabricante) {				
-		//validar datos que entran por body
-		Fabricantes fabrInput = new Fabricantes(fabricante.getNombre());				
-		return fabriServImpl.saveFabricante(fabrInput);
+	public String guardarFabricante(@RequestBody Fabricantes fabricante) {				
+		//validar datos que entran por body , que no se repita el nombre
+		boolean exists = false;
+		
+		for (Fabricantes f : fabriServImpl.listFabricantes()) {
+			if(f.getNombre().equals(fabricante.getNombre())) {
+				exists = true;
+			}
+		}
+		if(!exists) {
+			fabriServImpl.saveFabricante(fabricante);
+			return "Fabricante guardado!";
+		}
+		return "Fabricante ya existe!";			
 	}
 	
 	@DeleteMapping("/fabricantes/{id}")
-	public void deleteArticulo(@PathVariable(name="id") int id) {
+	public void deleteFabricante(@PathVariable(name="id") int id) {
 		fabriServImpl.deleteFabricante(id);
 	}
 	

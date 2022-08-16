@@ -16,5 +16,7 @@ public interface IArticulosService {
 	public List<Articulos> findByName(String name); // GET BY NAME
 		
 	public void deleteArticulo(int id);  //DELETE	
+
+	List<Articulos> findByFabricante(String name);
 	
 }

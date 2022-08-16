@@ -8,5 +8,7 @@ import com.ud25_TiendaInformatica.dto.Articulos;
 public interface IArticulosDAO extends JpaRepository<Articulos,Integer>{
 	
 	public List<Articulos> findByNombre(String name);
+
+	public List<Articulos> findByFabricante(String name);
 	
 }

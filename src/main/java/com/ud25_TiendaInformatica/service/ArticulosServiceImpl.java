@@ -31,6 +31,12 @@ public class ArticulosServiceImpl implements IArticulosService {
 	public List<Articulos> findByName(String name) {
 		return iArticulosDAO.findByNombre(name);
 	}
+	
+	@Override
+	public List<Articulos> findByFabricante(String name) {
+		return iArticulosDAO.findByFabricante(name);
+	}
+
 
 	@Override
 	public void deleteArticulo(int id) {

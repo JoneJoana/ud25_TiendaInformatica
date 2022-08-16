@@ -50,7 +50,7 @@ public class Fabricantes {
 	 * @return the articulos
 	 */
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "Articulos")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "articulos")
 	public List<Articulos> getArticulo() {
 		return articulos;
 	}
@@ -59,7 +59,7 @@ public class Fabricantes {
 	 * @param articulo 
 	 * the articulos to set
 	 */
-	public void setVideo(List<Articulos> articulos) {
+	public void setArticulo(List<Articulos> articulos) {
 		this.articulos = articulos;
 	}
 

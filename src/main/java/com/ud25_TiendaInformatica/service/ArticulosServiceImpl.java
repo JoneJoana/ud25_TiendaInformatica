@@ -29,13 +29,7 @@ public class ArticulosServiceImpl implements IArticulosService {
 
 	@Override
 	public List<Articulos> findByName(String name) {
-		return iArticulosDAO.findByName(name);
-	}
-
-	@Override
-	public List<Articulos> listArticulosXFabricante(String fabricante) {
-		// TODO Auto-generated method stub
-		return null;
+		return iArticulosDAO.findByNombre(name);
 	}
 
 	@Override

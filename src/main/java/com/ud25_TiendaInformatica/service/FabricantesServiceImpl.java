@@ -29,11 +29,11 @@ public class FabricantesServiceImpl implements IFabricantesService {
 
 	@Override
 	public List<Fabricantes> findByName(String name) {
-		return iFabricantesDAO.findByName(name);
+		return iFabricantesDAO.findByNombre(name);
 	}
 
 	@Override
-	public void deleteArticulo(int id) {
+	public void deleteFabricante(int id) {
 		iFabricantesDAO.deleteById(id);	
 	}
 

@@ -14,8 +14,6 @@ public interface IArticulosService {
 	public Articulos findByID(int id); //READ, SOLO 1 REGISTRO O NINGUNO
 	
 	public List<Articulos> findByName(String name); // GET BY NAME
-	
-	public List<Articulos> listArticulosXFabricante(String fabricante); // GET - valorar utilidad
 		
 	public void deleteArticulo(int id);  //DELETE	
 	

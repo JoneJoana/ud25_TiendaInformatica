@@ -7,6 +7,6 @@ import com.ud25_TiendaInformatica.dto.Fabricantes;
 
 public interface IFabricantesDAO extends JpaRepository<Fabricantes,Integer>{
 
-	public List<Fabricantes> findByName(String name);
+	public List<Fabricantes> findByNombre(String name);
 	
 }

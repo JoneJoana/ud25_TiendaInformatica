@@ -15,6 +15,6 @@ public interface IFabricantesService {
 	
 	public List<Fabricantes> findByName(String name);  //GET BY NAME
 		
-	public void deleteArticulo(int id);  //DELETE
+	public void deleteFabricante(int id);  //DELETE
 
 }

@@ -3,10 +3,12 @@ package com.ud25_TiendaInformatica.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ud25_TiendaInformatica.dao.IFabricantesDAO;
 import com.ud25_TiendaInformatica.dto.Fabricantes;
 
+@Service
 public class FabricantesServiceImpl implements IFabricantesService {
 	
 	@Autowired

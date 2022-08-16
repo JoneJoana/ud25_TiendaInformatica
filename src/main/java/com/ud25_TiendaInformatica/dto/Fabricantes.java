@@ -26,7 +26,7 @@ public class Fabricantes {
 	private String nombre;
 	
 	@OneToMany
-    @JoinColumn(name="id")
+    @JoinColumn(name="id_articulos")
     private List<Articulos> articulos;
 	
 	

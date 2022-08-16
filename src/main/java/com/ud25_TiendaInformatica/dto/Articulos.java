@@ -34,7 +34,6 @@ public class Articulos {
 		this.fabricante = fabricante;
 	}
 
-
 	public int getId() {
 		return id;
 	}

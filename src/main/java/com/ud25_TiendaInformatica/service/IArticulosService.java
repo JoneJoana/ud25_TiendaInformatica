@@ -3,6 +3,7 @@ package com.ud25_TiendaInformatica.service;
 import java.util.List;
 
 import com.ud25_TiendaInformatica.dto.Articulos;
+import com.ud25_TiendaInformatica.dto.Fabricantes;
 
 public interface IArticulosService {
 
@@ -17,6 +18,6 @@ public interface IArticulosService {
 		
 	public void deleteArticulo(int id);  //DELETE	
 
-	List<Articulos> findByFabricante(String name);
+	public List<Articulos> findByFabricante(Fabricantes fabricante);
 	
 }

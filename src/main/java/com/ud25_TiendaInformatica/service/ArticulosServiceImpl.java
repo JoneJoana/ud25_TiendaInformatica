@@ -3,10 +3,13 @@ package com.ud25_TiendaInformatica.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ud25_TiendaInformatica.dao.IArticulosDAO;
 import com.ud25_TiendaInformatica.dto.Articulos;
+import com.ud25_TiendaInformatica.dto.Fabricantes;
 
+@Service
 public class ArticulosServiceImpl implements IArticulosService {
 	
 	@Autowired
@@ -33,10 +36,9 @@ public class ArticulosServiceImpl implements IArticulosService {
 	}
 	
 	@Override
-	public List<Articulos> findByFabricante(String name) {
-		return iArticulosDAO.findByFabricante(name);
+	public List<Articulos> findByFabricante(Fabricantes fabricante) {
+		return iArticulosDAO.findByFabricante(fabricante);
 	}
-
 
 	@Override
 	public void deleteArticulo(int id) {

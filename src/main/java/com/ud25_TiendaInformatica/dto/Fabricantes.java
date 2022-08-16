@@ -51,7 +51,7 @@ public class Fabricantes {
 	 */
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "articulos")
-	public List<Articulos> getArticulo() {
+	public List<Articulos> getArticulos() {
 		return articulos;
 	}
 

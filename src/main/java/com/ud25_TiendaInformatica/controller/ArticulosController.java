@@ -45,10 +45,11 @@ public class ArticulosController {
 	}
 	
 	@PostMapping("/articulos")
-	public Articulos guardarArticulo(@RequestBody Articulos articulo) {				
+	public String guardarArticulo(@RequestBody Articulos articulo) {				
 		//validar datos que entran por body
 		Articulos artInput = new Articulos(articulo.getNombre(),articulo.getPrecio(),articulo.getFabricante());				
-		return artServImpl.saveArticulo(artInput);
+		artServImpl.saveArticulo(artInput);
+		return "Articulo guardado correctamente";
 	}
 	
 	@DeleteMapping("/articulos/{id}")

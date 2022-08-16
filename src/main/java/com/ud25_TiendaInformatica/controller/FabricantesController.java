@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ud25_TiendaInformatica.dto.Articulos;
 import com.ud25_TiendaInformatica.dto.Fabricantes;
 import com.ud25_TiendaInformatica.service.FabricantesServiceImpl;
 
@@ -36,7 +35,7 @@ public class FabricantesController {
 	@GetMapping("/fabricantes/nombre/{nombre}")
 	public List<Fabricantes> findByNombre(@PathVariable(name="nombre") String nombre) {
 		return fabriServImpl.findByName(nombre);
-	}
+	}	
 	
 	@PostMapping("/fabricantes") //crear
 	public String guardarFabricante(@RequestBody Fabricantes fabricante) {				

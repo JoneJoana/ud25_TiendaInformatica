@@ -25,8 +25,8 @@ public class Fabricantes {
 	@Column(name = "nombre")
 	private String nombre;
 	
-	@OneToMany
-    @JoinColumn(name="id_articulos")
+	@JsonIgnore
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "fabricante")
     private List<Articulos> articulos;
 	
 	
@@ -49,8 +49,6 @@ public class Fabricantes {
 	/**
 	 * @return the articulos
 	 */
-	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "articulos")
 	public List<Articulos> getArticulos() {
 		return articulos;
 	}

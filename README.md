@@ -1,5 +1,16 @@
 # U25 Spring REST ER
 
+## T25 - en local - info commit:
+```
+Commits on Aug 16, 2022
+
+Merge branch 'main' of https://github.com/JoneJoana/ud25_TiendaInformatica
+
+commit 8a021aaae55faff600b96fc50abd4cbe653b876b
+```
+
+## T26 --> DEPLOY HEROKU - ultima version app
+
 ## Articulos API
 
 ### GET: 
